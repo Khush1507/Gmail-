@@ -1,0 +1,23 @@
+android {
+    compileSdkVersion 33
+
+    defaultConfig {
+        applicationId "com.example.gmail_clone"
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+
+        // Add this line
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            // Enable shrinking, obfuscating, and optimizing your app's code
+            minifyEnabled true
+            // Include the default ProGuard rules files
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
